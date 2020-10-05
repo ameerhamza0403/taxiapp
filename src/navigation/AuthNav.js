@@ -4,6 +4,7 @@ import React, {Component} from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
 
 import SignIn from '../containers/SignIn';
+import SignUp from '../containers/SignUp';
 
 const AuthScreen = createStackNavigator();
 export const AuthNav = () => {
@@ -13,6 +14,7 @@ export const AuthNav = () => {
         headerShown: false,
       }}>
       <AuthScreen.Screen name="SignIn" component={SignIn} />
+      <AuthScreen.Screen name="SignUp" component={SignUp} />
     </AuthScreen.Navigator>
   );
 };

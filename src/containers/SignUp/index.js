@@ -11,26 +11,22 @@ const SignIn = (props) => {
     <Screen backgroundColor="white">
       <View key="header">
         <AppText bold size={30} center>
-          Sign in
+          Sign up
         </AppText>
       </View>
       <View key="content">
         <View style={styles.content}>
-          <InputWithLabel bold label="EMAIL" />
-          <InputWithLabel bold label="PASSWORD" />
-          <Button bold>Sign In</Button>
-          <View>
-            <AppText center bold>
-              OR SIGN IN WITH
-            </AppText>
-          </View>
+          <InputWithLabel label="NAME" />
+          <InputWithLabel label="EMAIL" />
+          <InputWithLabel label="PASSWORD" />
+          <Button bold>Sign Up</Button>
         </View>
       </View>
       <View key="footer">
         <AppText center>
-          Don’t have an account?{' '}
-          <AppText onPress={() => navigate('SignUp')} underline primary>
-            Sign up
+          Already have an account?{' '}
+          <AppText onPress={() => navigate('SignIn')} underline primary>
+            Sign in
           </AppText>
         </AppText>
       </View>

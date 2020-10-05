@@ -34,7 +34,7 @@ const Navigation = () => {
     colors: {
       ...DefaultTheme.colors,
       appColor: '#014488',
-      primary: '#c27e12',
+      primary: 'blue',
       secondary: 'green',
       white: 'white',
       warmGray: '#939393',
@@ -57,7 +57,7 @@ const Navigation = () => {
         <RootStack.Navigator screenOptions={{headerShown: false}}>
           <RootStack.Screen name="Splash" component={Splash} />
         </RootStack.Navigator>
-      ) : token ? (
+      ) : !token ? (
         <RootStack.Navigator screenOptions={{headerShown: false}}>
           <RootStack.Screen name="Drawer" component={DrawerNav} />
         </RootStack.Navigator>

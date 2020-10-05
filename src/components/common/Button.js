@@ -17,6 +17,7 @@ const Button = (props) => {
     secondary,
     primary,
     borderRadius,
+    bold,
   } = props;
   const {colors} = useTheme();
   return (
@@ -24,10 +25,10 @@ const Button = (props) => {
       style={[
         {
           justifyContent: 'center',
-          height: 45,
+          height: 60,
           width: width || '100%',
-          borderRadius: round ? 35 : 5,
-          backgroundColor: background || 'white',
+          borderRadius: round ? 35 : 15,
+          backgroundColor: background || colors.primary,
         },
         borderRadius && {borderRadius: parseInt(borderRadius)},
         primary && {backgroundColor: colors.primary},
@@ -39,9 +40,10 @@ const Button = (props) => {
         size={fontSize}
         style={{
           textAlign: 'center',
-          color: color || 'black',
+          color: color || 'white',
           fontSize: 20,
-        }}>
+        }}
+        bold={bold}>
         {children || 'Button'}
       </AppText>
     </TouchableOpacity>

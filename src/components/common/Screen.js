@@ -25,6 +25,7 @@ class Screen extends Component {
           style={[
             styles.formContainer,
             {backgroundColor: this.props.backgroundColor},
+            this.props.style && this.props.style,
           ]}>
           {this.getComponent('header').length ? (
             <View style={styles.header}>{this.getComponent('header')}</View>

@@ -42,8 +42,8 @@ const AppText = (props) => {
 };
 const styles = StyleSheet.create({
   TextStyle: {
-    fontFamily: 'Roboto-Medium',
-    fontSize: 20,
+    fontSize: 16,
+    color: 'black',
   },
 });
 export {AppText};
