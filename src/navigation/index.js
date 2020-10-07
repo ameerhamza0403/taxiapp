@@ -1,7 +1,6 @@
 /* eslint-disable prettier/prettier */
 import React, {useEffect, useState} from 'react';
 import {NavigationContainer, DefaultTheme} from '@react-navigation/native';
-
 import {createStackNavigator} from '@react-navigation/stack';
 import {createDrawerNavigator} from '@react-navigation/drawer';
 
@@ -34,8 +33,8 @@ const Navigation = () => {
     colors: {
       ...DefaultTheme.colors,
       appColor: '#014488',
-      primary: 'blue',
-      secondary: 'green',
+      primary: '#1152FD',
+      secondary: '#000',
       white: 'white',
       warmGray: '#939393',
       background: '#e8e8e8',

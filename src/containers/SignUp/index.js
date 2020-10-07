@@ -8,7 +8,7 @@ const SignIn = (props) => {
     navigation: {navigate},
   } = props;
   return (
-    <Screen backgroundColor="white">
+    <Screen>
       <View key="header">
         <AppText bold size={30} center>
           Sign up
@@ -19,7 +19,9 @@ const SignIn = (props) => {
           <InputWithLabel label="NAME" />
           <InputWithLabel label="EMAIL" />
           <InputWithLabel label="PASSWORD" />
-          <Button bold>Sign Up</Button>
+          <Button bold onPress={() => navigate('VerifyCode')}>
+            Sign Up
+          </Button>
         </View>
       </View>
       <View key="footer">
