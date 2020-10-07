@@ -1,16 +1,57 @@
 /* eslint-disable prettier/prettier */
 import React from 'react';
-import {View} from 'react-native';
+import {View, ScrollView} from 'react-native';
 import {AppText, Screen} from '../../components/common';
+import {useTheme} from '@react-navigation/native';
 
 const DrawerMenu = (props) => {
+  const {colors} = useTheme();
+
   return (
-    <Screen>
-      <View key="header" />
-      <View key="content">
-        <AppText>Drawer Menu</AppText>
+    <ScrollView contentContainerStyle={{flexGrow: 1}}>
+      <View
+        style={{
+          flex: 2,
+          backgroundColor: colors.primary,
+          justifyContent: 'flex-end',
+          paddingHorizontal: 40,
+        }}>
+        <View
+          style={{
+            height: 100,
+            aspectRatio: 1,
+            borderRadius: 50,
+            borderWidth: 2,
+          }}></View>
+        <AppText white bold>
+          Carson
+        </AppText>
+        <AppText white>email</AppText>
       </View>
-    </Screen>
+      <View
+        style={{
+          flex: 3,
+          padding: 40,
+        }}>
+        <AppText bold style={{marginVertical: 10}}>
+          RIDE HISTORY
+        </AppText>
+        <AppText bold style={{marginVertical: 10}}>
+          PAYMENT
+        </AppText>
+        <AppText bold style={{marginVertical: 10}}>
+          PROMO CODE
+        </AppText>
+        <AppText bold style={{marginVertical: 10}}>
+          SUPPORT
+        </AppText>
+      </View>
+      <View style={{flex: 1, paddingHorizontal: 40, justifyContent: 'center'}}>
+        <AppText underline primary>
+          Sign out
+        </AppText>
+      </View>
+    </ScrollView>
   );
 };
 export default DrawerMenu;
