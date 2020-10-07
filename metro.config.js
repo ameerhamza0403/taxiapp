@@ -4,7 +4,7 @@
  *
  * @format
  */
-
+// node_version : 10.17.0
 module.exports = {
   transformer: {
     getTransformOptions: async () => ({
