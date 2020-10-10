@@ -74,13 +74,12 @@ const Support = (props) => {
 
 const styles = StyleSheet.create({
   container: {flex:1},
-  topContainer :{height:'35%', paddingHorizontal :'2%'},
-  contentContainer :{flex:1,paddingHorizontal :20},
-  card :{width: '100%', alignSelf :'center',paddingVertical: 30, paddingHorizontal : 15, top: -30},
-  cardRow :{flexDirection:'row', alignItems: 'center',justifyContent : 'space-between'},
-  line : {height:0,width: '100%',borderWidth:0.5, marginVertical :15},
+  topContainer:{height:'35%', paddingHorizontal :'2%'},
+  contentContainer:{flex:1,paddingHorizontal :20},
+  card:{width: '100%', alignSelf :'center',paddingVertical: 30, paddingHorizontal : 15, top: -30},
+  cardRow:{flexDirection:'row', alignItems: 'center',justifyContent : 'space-between'},
+  line: {height:0,width: '100%',borderWidth:0.5, marginVertical :15},
   optionCardsContainer:{flexDirection: 'row', flexWrap:'wrap',justifyContent: 'space-between'},
-  optionCard :{width: '30%', aspectRatio :1,justifyContent : 'space-around', padding :15},
-
+  optionCard:{width: '30%', aspectRatio :1,justifyContent : 'space-around', padding :15},
 });
 export default Support;

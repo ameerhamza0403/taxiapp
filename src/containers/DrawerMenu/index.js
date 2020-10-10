@@ -47,7 +47,7 @@ const {navigation : {navigate}} = props;
         </AppText>
       </View>
       <View style={{flex: 1, paddingHorizontal: 40, justifyContent: 'center'}}>
-        <AppText underline primary>
+        <AppText onPress={()=>navigate('SignIn')} underline primary>
           Sign out
         </AppText>
       </View>
