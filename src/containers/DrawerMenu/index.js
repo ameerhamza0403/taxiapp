@@ -6,7 +6,7 @@ import {useTheme} from '@react-navigation/native';
 
 const DrawerMenu = (props) => {
   const {colors} = useTheme();
-
+const {navigation : {navigate}} = props;
   return (
     <ScrollView contentContainerStyle={{flexGrow: 1}}>
       <View
@@ -23,7 +23,7 @@ const DrawerMenu = (props) => {
             borderRadius: 50,
             borderWidth: 2,
           }}></View>
-        <AppText white bold size={20} style={{marginVertical:3}} onPress={()=>props.navigation.navigate('Profile')}>
+        <AppText white bold size={20} style={{marginVertical:3}} onPress={()=>navigate('Profile')}>
           Carson
         </AppText>
         <AppText white size={20} style={{marginVertical:3}}>email</AppText>
@@ -42,7 +42,7 @@ const DrawerMenu = (props) => {
         <AppText bold style={{marginVertical: 10}}>
           PROMO CODE
         </AppText>
-        <AppText bold style={{marginVertical: 10}}>
+        <AppText  onPress={()=>navigate('Support')} bold style={{marginVertical: 10}}>
           SUPPORT
         </AppText>
       </View>
