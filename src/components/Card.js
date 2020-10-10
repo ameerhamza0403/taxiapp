@@ -9,6 +9,7 @@ const Card = (props) => {
   } = props;
   return (
    <View style= {[{
+      width: '100%', 
       alignSelf:'center',
       borderRadius: 10,
       backgroundColor: '#ffffff',
