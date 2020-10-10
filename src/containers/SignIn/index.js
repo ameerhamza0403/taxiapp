@@ -1,6 +1,6 @@
 import React from 'react';
 import {View, StyleSheet} from 'react-native';
-import {InputWithLabel} from '../../components';
+import {InputWithLabel, RoundIcon} from '../../components';
 import {AppText, Button, Screen} from '../../components/common';
 
 const SignIn = (props) => {
@@ -20,11 +20,29 @@ const SignIn = (props) => {
           <InputWithLabel bold label="PASSWORD" />
           <Button bold onPress={() => navigate('Drawer', {screen: 'Home'})}>
             Sign In
-          </Button>
+          </Button >
           <View>
-            <AppText center bold>
+            <AppText  style={{marginVertical :30}} center bold>
               OR SIGN IN WITH
             </AppText>
+            <View style={{flexDirection: 'row', justifyContent: 'space-around'}}>
+              <RoundIcon
+                name="sc-facebook"
+                type="evilicon"
+                color="#fff"
+              />
+              <RoundIcon
+                name="sc-twitter"
+                type="evilicon"
+                color="#fff"
+              />
+              <RoundIcon
+                name="google"
+                type="font-awesome"
+                color="#fff"
+                size= {40}
+              />
+            </View>
           </View>
         </View>
       </View>
@@ -43,6 +61,7 @@ const styles = StyleSheet.create({
   content: {
     height: '100%',
     justifyContent: 'center',
+    marginBottom:40
   },
 });
 export default SignIn;
