@@ -1,6 +1,6 @@
 /* eslint-disable prettier/prettier */
 import React from 'react';
-import {StyleSheet, Text, Button, View, TouchableOpacity} from 'react-native';
+import {StyleSheet,  Image, View, TouchableOpacity} from 'react-native';
 import {Icon} from 'react-native-elements';
 
 import {useTheme} from '@react-navigation/native';
@@ -19,9 +19,9 @@ const Keyboard = (props) => {
     '7',
     '8',
     '9',
-    <Icon name="menu" type="feather" />,
+    <Image source= {require('../assets/images/ic_check.png')} />,
     '0',
-    <Icon name="menu" type="feather" />,
+    <Image source= {require('../assets/images/icon-del.png')} />,
   ];
   // const {
   //   viewStyle,

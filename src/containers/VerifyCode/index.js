@@ -45,10 +45,7 @@ const styles = StyleSheet.create({
   centerContainer:{flex: 1, alignItems:'center', justifyContent : 'space-around'},
   otpContainer :{flexDirection:'row', marginBottom:12},
   digitContainer :{borderBottomWidth :2, paddingBottom:5, marginHorizontal:2},
-  callBtn :{
-    height: 60,
-    justifyContent: 'center',
-  }
+  callBtn :{height: 60, justifyContent: 'center'}
   
  
 });
