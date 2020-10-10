@@ -46,7 +46,5 @@ const styles = StyleSheet.create({
   otpContainer :{flexDirection:'row', marginBottom:12},
   digitContainer :{borderBottomWidth :2, paddingBottom:5, marginHorizontal:2},
   callBtn :{height: 60, justifyContent: 'center'}
-  
- 
 });
 export default VerifyCode;

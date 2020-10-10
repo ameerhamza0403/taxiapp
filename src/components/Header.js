@@ -25,10 +25,9 @@ const Header = (props) => {
         ) : (
           <Icon
             onPress={() => navigation.goBack()}
-            color={headerColor}
-            name="arrow-left"
-            type="ionicons"
-            size= {30}
+            name="keyboard-arrow-left"
+            type="material-icons"
+            size= {35}
             containerStyle={styles.backIconContainer}
           />
         )}
@@ -57,22 +56,20 @@ const styles = StyleSheet.create({
     justifyContent: 'space-around',
   },
   backIconContainer :{
-    // borderWidth: 1,
+    width: 45,
     aspectRatio: 1,
-    width: 50,
-    height: 50,
     borderRadius: 25,
     justifyContent: 'center',
     alignItems: 'center',
-    shadowColor: "#000",
+    backgroundColor: 'white',
+    elevation: 3,
+    opacity: 1,
     shadowOffset: {
-	    width: 0,
-	    height: 0,
-   },
-    shadowOpacity: 0.20,
-    shadowRadius: 1.41,
-
-elevation: 1,
+      width: 0,
+      height: 7,
+    },
+    shadowOpacity: 0.23,
+    shadowRadius: 1.51
   }
 });
 export {Header};
