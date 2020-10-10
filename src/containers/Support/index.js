@@ -78,7 +78,7 @@ const styles = StyleSheet.create({
   contentContainer :{flex:1,paddingHorizontal :20},
   card :{width: '100%', alignSelf :'center',paddingVertical: 30, paddingHorizontal : 15, top: -30},
   cardRow :{flexDirection:'row', alignItems: 'center',justifyContent : 'space-between'},
-  line : {height:0,width: '100%',borderWidth:0.5, marginVertical :10},
+  line : {height:0,width: '100%',borderWidth:0.5, marginVertical :15},
   optionCardsContainer:{flexDirection: 'row', flexWrap:'wrap',justifyContent: 'space-between'},
   optionCard :{width: '30%', aspectRatio :1,justifyContent : 'space-around', padding :15},
 
