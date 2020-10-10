@@ -23,10 +23,10 @@ const DrawerMenu = (props) => {
             borderRadius: 50,
             borderWidth: 2,
           }}></View>
-        <AppText white bold>
+        <AppText white bold size={20} style={{marginVertical:3}} onPress={()=>props.navigation.navigate('Profile')}>
           Carson
         </AppText>
-        <AppText white>email</AppText>
+        <AppText white size={20} style={{marginVertical:3}}>email</AppText>
       </View>
       <View
         style={{

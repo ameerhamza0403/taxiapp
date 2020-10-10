@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import {View, StyleSheet} from 'react-native';
 import {InputWithLabel} from '../../components';
 import {AppText, Button, Screen} from '../../components/common';
@@ -18,7 +18,7 @@ const SignIn = (props) => {
         <View style={styles.content}>
           <InputWithLabel bold label="EMAIL" />
           <InputWithLabel bold label="PASSWORD" />
-          <Button bold onPress={() => navigate('VerifyCode')}>
+          <Button bold onPress={() => navigate('Drawer', {screen: 'Home'})}>
             Sign In
           </Button>
           <View>

@@ -56,8 +56,9 @@ const Navigation = () => {
         <RootStack.Navigator screenOptions={{headerShown: false}}>
           <RootStack.Screen name="Splash" component={Splash} />
         </RootStack.Navigator>
-      ) : !token ? (
+      ) : token ? (
         <RootStack.Navigator screenOptions={{headerShown: false}}>
+          <RootStack.Screen name="Auth" component={AuthNav} />
           <RootStack.Screen name="Drawer" component={DrawerNav} />
         </RootStack.Navigator>
       ) : (

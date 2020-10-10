@@ -11,11 +11,10 @@ const Header = (props) => {
     navigation,
     title,
     color,
-    secondary,
     primary,
     route: {name},
     headerLeft,
-    headerRight,
+    headerRight,noTitle
   } = props;
   const headerColor = color || (primary && colors.primary) || colors.secondary;
   return (
@@ -27,32 +26,19 @@ const Header = (props) => {
           <Icon
             onPress={() => navigation.goBack()}
             color={headerColor}
-            name="menu"
-            type="feather"
-            containerStyle={{
-              // borderWidth: 1,
-              aspectRatio: 1,
-              width: 50,
-              borderRadius: 25,
-              justifyContent: 'center',
-              alignItems: 'center',
-              shadowRadius: 4,
-              shadowOffset: {
-                width: 1,
-                height: 4,
-              },
-              shadowColor: '#FFF',
-              elevation: 1,
-            }}
+            name="arrow-left"
+            type="ionicons"
+            size= {30}
+            containerStyle={styles.backIconContainer}
           />
         )}
       </View>
 
-      <View style={{flex: 4}}>
+      {!noTitle && <View style={{flex: 4}}>
         <AppText bold size={30} center color={headerColor}>
           {title || name}
         </AppText>
-      </View>
+      </View>}
       <View style={{flex: 1}}>{headerRight}</View>
     </View>
   );
@@ -70,5 +56,23 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-around',
   },
+  backIconContainer :{
+    // borderWidth: 1,
+    aspectRatio: 1,
+    width: 50,
+    height: 50,
+    borderRadius: 25,
+    justifyContent: 'center',
+    alignItems: 'center',
+    shadowColor: "#000",
+    shadowOffset: {
+	    width: 0,
+	    height: 0,
+   },
+    shadowOpacity: 0.20,
+    shadowRadius: 1.41,
+
+elevation: 1,
+  }
 });
 export {Header};
