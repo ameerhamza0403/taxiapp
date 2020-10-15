@@ -7,7 +7,9 @@ const SignIn = (props) => {
   const [option, setOption] = useState('Phone');
   const {
     navigation: {navigate},
-    route: {params},
+    route: {
+      params: {type},
+    },
   } = props;
   return (
     <Screen>
@@ -18,13 +20,16 @@ const SignIn = (props) => {
       </View>
       <View key="content">
         <View style={styles.content}>
-          {params.type === 'social' && <InputWithLabel label="NAME" />}
-          <InputWithLabel label={option === 'Phone' ? 'EMAIL' : 'PHONE'} />
+          <InputWithLabel label="FIRST NAME" />
+          <InputWithLabel label="LAST NAME" />
+          <InputWithLabel label="EMAIL" />
           <InputWithLabel label="PASSWORD" />
+          {type === 'social' && <InputWithLabel label="Phone" />}
           <Button bold onPress={() => navigate('VerifyCode')}>
             Sign Up
           </Button>
-          <AppText center bold style={{marginVertical: 10}}>
+
+          {/* <AppText center bold style={{marginVertical: 10}}>
             OR
           </AppText>
           <Button
@@ -32,7 +37,7 @@ const SignIn = (props) => {
             bold
             onPress={() => setOption(option === 'Phone' ? 'Email' : 'Phone')}>
             {`Sign Up With ${option}`}
-          </Button>
+          </Button> */}
         </View>
       </View>
       <View key="footer">
