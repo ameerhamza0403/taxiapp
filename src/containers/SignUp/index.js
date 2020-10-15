@@ -4,8 +4,10 @@ import {InputWithLabel} from '../../components';
 import {AppText, Button, Screen} from '../../components/common';
 
 const SignIn = (props) => {
+  const [option, setOption] = useState('Phone');
   const {
     navigation: {navigate},
+    route: {params},
   } = props;
   return (
     <Screen>
@@ -16,11 +18,20 @@ const SignIn = (props) => {
       </View>
       <View key="content">
         <View style={styles.content}>
-          <InputWithLabel label="NAME" />
-          <InputWithLabel label="EMAIL" />
+          {params.type === 'social' && <InputWithLabel label="NAME" />}
+          <InputWithLabel label={option === 'Phone' ? 'EMAIL' : 'PHONE'} />
           <InputWithLabel label="PASSWORD" />
           <Button bold onPress={() => navigate('VerifyCode')}>
             Sign Up
+          </Button>
+          <AppText center bold style={{marginVertical: 10}}>
+            OR
+          </AppText>
+          <Button
+            background="black"
+            bold
+            onPress={() => setOption(option === 'Phone' ? 'Email' : 'Phone')}>
+            {`Sign Up With ${option}`}
           </Button>
         </View>
       </View>

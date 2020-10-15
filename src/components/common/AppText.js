@@ -17,7 +17,7 @@ const AppText = (props) => {
     right,
     color,
     white,
-    gray
+    gray,
   } = props;
 
   return (
@@ -44,7 +44,7 @@ const AppText = (props) => {
 };
 const styles = StyleSheet.create({
   TextStyle: {
-    fontSize: 16,
+    fontSize: 18,
     color: 'black',
   },
 });

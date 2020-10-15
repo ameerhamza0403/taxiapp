@@ -16,31 +16,24 @@ const SignIn = (props) => {
       </View>
       <View key="content">
         <View style={styles.content}>
-          <InputWithLabel bold label="EMAIL" />
+          <InputWithLabel bold label="EMAIL/PHONE" />
           <InputWithLabel bold label="PASSWORD" />
           <Button bold onPress={() => navigate('Drawer', {screen: 'Home'})}>
             Sign In
-          </Button >
+          </Button>
           <View>
-            <AppText  style={{marginVertical :30}} center bold>
+            <AppText style={{marginVertical: 30}} center bold>
               OR SIGN IN WITH
             </AppText>
-            <View style={{flexDirection: 'row', justifyContent: 'space-around'}}>
-              <RoundIcon
-                name="sc-facebook"
-                type="evilicon"
-                color="#fff"
-              />
-              <RoundIcon
-                name="sc-twitter"
-                type="evilicon"
-                color="#fff"
-              />
+            <View
+              style={{flexDirection: 'row', justifyContent: 'space-around'}}>
+              <RoundIcon name="sc-facebook" type="evilicon" color="#fff" />
+              <RoundIcon name="sc-twitter" type="evilicon" color="#fff" />
               <RoundIcon
                 name="google"
                 type="font-awesome"
                 color="#fff"
-                size= {40}
+                size={40}
               />
             </View>
           </View>
@@ -61,7 +54,7 @@ const styles = StyleSheet.create({
   content: {
     height: '100%',
     justifyContent: 'center',
-    marginBottom:40
+    marginBottom: 40,
   },
 });
 export default SignIn;

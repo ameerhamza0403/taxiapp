@@ -24,6 +24,7 @@ const Button = (props) => {
     <TouchableOpacity
       style={[
         {
+          marginVertical: 5,
           justifyContent: 'center',
           height: 60,
           width: width || '100%',
