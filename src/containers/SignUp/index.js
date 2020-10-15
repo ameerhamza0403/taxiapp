@@ -20,11 +20,11 @@ const SignIn = (props) => {
       </View>
       <View key="content">
         <View style={styles.content}>
-          <InputWithLabel label="FIRST NAME" />
-          <InputWithLabel label="LAST NAME" />
-          <InputWithLabel label="EMAIL" />
-          <InputWithLabel label="PASSWORD" />
-          {type === 'social' && <InputWithLabel label="Phone" />}
+          <InputWithLabel bold label="FIRST NAME" />
+          <InputWithLabel bold label="LAST NAME" />
+          <InputWithLabel bold label="EMAIL" />
+          <InputWithLabel bold label="PASSWORD" />
+          {type === 'social' && <InputWithLabel bold label="Phone" />}
           <Button bold onPress={() => navigate('VerifyCode')}>
             Sign Up
           </Button>
