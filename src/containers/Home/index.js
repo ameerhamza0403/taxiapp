@@ -1,15 +1,39 @@
-import React, {useState} from 'react';
-import {View} from 'react-native';
-import {AppText, Screen, Button, Picker} from '../../components/common';
+import * as React from 'react';
+import {StyleSheet, Image, View} from 'react-native';
+import {Icon} from 'react-native-elements';
+import {Card, Header, HorizontalRow} from '../../components';
+import {AppText, Button, Screen} from '../../components/common';
 
-const Home = (props) => {
+export default function Home(props) {
   return (
     <Screen>
-      <View key="header"></View>
+      <View key="header">
+        <Header
+          headerLeft={<Icon name="menu" type="material-icons" size={20} />}
+          noTitle
+          {...props}
+        />
+      </View>
       <View key="content">
-        <AppText>Home</AppText>
+        <Card style={{flexDirection: 'row', paddingVertical: 15}}>
+          <View
+            style={{
+              width: '15%',
+              alignItems: 'center',
+              justifyContent: 'center',
+            }}>
+            <Image source={require('../../assets/images/ic_route.png')} />
+          </View>
+          <View style={{width: '85%'}}>
+            <AppText>24, ocean Avenue</AppText>
+            <HorizontalRow />
+            <AppText gray>i'm going to</AppText>
+          </View>
+        </Card>
+      </View>
+      <View key="footer">
+        <Button>Next</Button>
       </View>
     </Screen>
   );
-};
-export default Home;
+}

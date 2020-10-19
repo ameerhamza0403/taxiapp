@@ -14,30 +14,34 @@ const Header = (props) => {
     primary,
     route: {name},
     headerLeft,
-    headerRight,noTitle
+    headerRight,
+    noTitle,
   } = props;
   const headerColor = color || (primary && colors.primary) || colors.secondary;
   return (
     <View style={styles.container}>
       <View style={{flex: 1}}>
-        {headerLeft ? (
-          headerLeft
-        ) : (
-          <Icon
-            onPress={() => navigation.goBack()}
-            name="keyboard-arrow-left"
-            type="material-icons"
-            size= {35}
-            containerStyle={styles.backIconContainer}
-          />
-        )}
+        <View style={styles.backIconContainer}>
+          {headerLeft ? (
+            headerLeft
+          ) : (
+            <Icon
+              onPress={() => navigation.goBack()}
+              name="keyboard-arrow-left"
+              type="material-icons"
+              size={35}
+            />
+          )}
+        </View>
       </View>
 
-      {!noTitle && <View style={{flex: 4}}>
-        <AppText bold size={30} center color={headerColor}>
-          {title || name}
-        </AppText>
-      </View>}
+      {!noTitle && (
+        <View style={{flex: 4}}>
+          <AppText bold size={30} center color={headerColor}>
+            {title || name}
+          </AppText>
+        </View>
+      )}
       <View style={{flex: 1}}>{headerRight}</View>
     </View>
   );
@@ -55,7 +59,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-around',
   },
-  backIconContainer :{
+  backIconContainer: {
     width: 45,
     aspectRatio: 1,
     borderRadius: 25,
@@ -69,7 +73,7 @@ const styles = StyleSheet.create({
       height: 7,
     },
     shadowOpacity: 0.23,
-    shadowRadius: 1.51
-  }
+    shadowRadius: 1.51,
+  },
 });
 export {Header};

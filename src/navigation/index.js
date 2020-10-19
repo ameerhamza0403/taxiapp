@@ -58,7 +58,7 @@ const Navigation = () => {
         </RootStack.Navigator>
       ) : token ? (
         <RootStack.Navigator screenOptions={{headerShown: false}}>
-          <RootStack.Screen name="Auth" component={AuthNav} />
+          {/* <RootStack.Screen name="Auth" component={AuthNav} /> */}
           <RootStack.Screen name="Drawer" component={DrawerNav} />
         </RootStack.Navigator>
       ) : (
