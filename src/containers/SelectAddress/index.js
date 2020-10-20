@@ -27,6 +27,7 @@ export default function SelectAddress(props) {
           padding: 20,
           paddingVertical: 30,
           backgroundColor: 'white',
+          marginTop: 50,
         }}>
         <Card
           style={{
@@ -47,6 +48,7 @@ export default function SelectAddress(props) {
             <TextInput
               style={{paddingVertical: 0}}
               placeholder={`i'm going to`}
+              onSubmitEditing={() => navigation.navigate('Ride options')}
             />
           </View>
         </Card>
