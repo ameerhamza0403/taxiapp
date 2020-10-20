@@ -1,10 +1,12 @@
 import * as React from 'react';
 import {StyleSheet, Image, View} from 'react-native';
 import {Icon} from 'react-native-elements';
+import {NavigationEvents} from 'react-navigation';
 import {Card, Header, HorizontalRow} from '../../components';
 import {AppText, Button, Screen} from '../../components/common';
 
 export default function Home(props) {
+  const {navigation} = props;
   return (
     <Screen>
       <View key="header">
@@ -15,7 +17,11 @@ export default function Home(props) {
         />
       </View>
       <View key="content">
-        <Card style={{flexDirection: 'row', paddingVertical: 15}}>
+        <Card
+          style={{
+            flexDirection: 'row',
+            paddingVertical: 15,
+          }}>
           <View
             style={{
               width: '15%',
@@ -27,7 +33,9 @@ export default function Home(props) {
           <View style={{width: '85%'}}>
             <AppText>24, ocean Avenue</AppText>
             <HorizontalRow />
-            <AppText gray>i'm going to</AppText>
+            <AppText onPress={() => navigation.navigate('Select address')} gray>
+              i'm going to
+            </AppText>
           </View>
         </Card>
       </View>

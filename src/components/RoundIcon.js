@@ -5,18 +5,18 @@ import {Icon} from 'react-native-elements';
 import {useTheme} from '@react-navigation/native';
 
 const RoundIcon = (props) => {
-  const {background, large, small,size} = props;
+  const {background, large, small, size} = props;
   const {colors} = useTheme();
   return (
     <Icon
       containerStyle={{
         justifyContent: 'center',
-        width: large ? 90 : small ? 40 : 60,
+        width: large ? 90 : small ? 45 : 60,
         aspectRatio: 1,
         borderRadius: large ? 45 : 30,
         backgroundColor: background || '#D5DDE0',
       }}
-      size= {size || 50}
+      size={size || 50}
       {...props}
       // color
       // disabled
