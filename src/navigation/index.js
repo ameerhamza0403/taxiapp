@@ -39,7 +39,7 @@ const Navigation = () => {
       gray: '#4B545A',
       gray2: '#97ADB6',
       gray3: '#F7F8F9',
-      background: '#e8e8e8',
+      background: '#D5DDE0',
       black: '#3E4958',
     },
   };

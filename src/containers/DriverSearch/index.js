@@ -75,7 +75,7 @@ export default function DriverSearch(props) {
           style={{
             flexDirection: 'row',
             alignItems: 'center',
-            backgroundColor: colors.gray3,
+            backgroundColor: colors.background,
             marginVertical: 20,
             borderRadius: 10,
             padding: 15,

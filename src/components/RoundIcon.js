@@ -11,6 +11,7 @@ const RoundIcon = (props) => {
     <Icon
       containerStyle={{
         justifyContent: 'center',
+        alignItems: 'center',
         width: large ? 90 : small ? 45 : 60,
         aspectRatio: 1,
         borderRadius: large ? 45 : 30,

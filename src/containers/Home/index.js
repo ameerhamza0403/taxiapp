@@ -40,7 +40,7 @@ export default function Home(props) {
         </Card>
       </View>
       <View key="footer">
-        <Button>Next</Button>
+        <Button onPress={() => navigation.navigate('Arriving')}>Next</Button>
       </View>
     </Screen>
   );
