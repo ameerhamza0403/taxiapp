@@ -6,6 +6,7 @@ import Profile from '../containers/Profile';
 import Support from '../containers/Support';
 import SelectAddress from '../containers/SelectAddress';
 import RideOptions from '../containers/RideOptions';
+import DriverSearch from '../containers/DriverSearch';
 
 const Stack = createStackNavigator();
 
@@ -21,6 +22,7 @@ export const DashboardNav = () => {
       <Stack.Screen name="Support" component={Support} />
       <Stack.Screen name="Select address" component={SelectAddress} />
       <Stack.Screen name="Ride options" component={RideOptions} />
+      <Stack.Screen name="DriverSearch" component={DriverSearch} />
     </Stack.Navigator>
   );
 };

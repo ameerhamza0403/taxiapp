@@ -37,8 +37,10 @@ const Navigation = () => {
       secondary: '#000',
       white: 'white',
       gray: '#4B545A',
+      gray2: '#97ADB6',
+      gray3: '#F7F8F9',
       background: '#e8e8e8',
-      textBlack: '#3B3B3B',
+      black: '#3E4958',
     },
   };
 

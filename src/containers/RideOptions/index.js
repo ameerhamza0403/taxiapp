@@ -83,7 +83,9 @@ export default function RideOptions(props) {
             <AppText>8295</AppText>
           </View>
         </View>
-        <Button>Book ride</Button>
+        <Button onPress={() => navigation.navigate('DriverSearch')}>
+          Book ride
+        </Button>
       </View>
     </Screen>
   );

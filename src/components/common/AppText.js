@@ -18,6 +18,8 @@ const AppText = (props) => {
     color,
     white,
     gray,
+    gray2,
+    gray3,
   } = props;
 
   return (
@@ -33,6 +35,8 @@ const AppText = (props) => {
         primary && {color: colors.primary},
         white && {color: colors.white},
         gray && {color: colors.gray},
+        gray2 && {color: colors.gray2},
+        gray3 && {color: colors.gray3},
         underline && {textDecorationLine: 'underline'},
         size && {fontSize: parseInt(size)},
         center && {textAlign: 'center'},
@@ -45,7 +49,7 @@ const AppText = (props) => {
 const styles = StyleSheet.create({
   TextStyle: {
     fontSize: 18,
-    color: 'black',
+    color: '#3E4958',
   },
 });
 export {AppText};
