@@ -38,6 +38,7 @@ export default function RideOptions(props) {
           horizontal
           showsHorizontalScrollIndicator={false}
           data={[1, 2, 3]}
+          keyExtractor={(num) => num.toString()}
           renderItem={() => {
             return (
               <Card

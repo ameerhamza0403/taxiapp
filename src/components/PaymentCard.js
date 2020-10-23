@@ -5,7 +5,7 @@ import {AppText} from './common';
 
 const PaymentCard = (props) => {
   const {colors} = useTheme();
-  const {children, style} = props;
+  const {children, style, amount} = props;
   return (
     <View
       style={{
@@ -26,7 +26,7 @@ const PaymentCard = (props) => {
           justifyContent: 'space-between',
         }}>
         <AppText>{`**** 8295`} </AppText>
-        <AppText>$7</AppText>
+        {amount && <AppText>$7</AppText>}
       </View>
     </View>
   );

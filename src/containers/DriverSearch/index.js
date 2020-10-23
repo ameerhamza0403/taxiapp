@@ -14,6 +14,7 @@ import {
   Card,
   Header,
   HorizontalRow,
+  PaymentCard,
   RoundIcon,
   RouteDetails,
 } from '../../components';
@@ -24,48 +25,31 @@ export default function DriverSearch(props) {
   const {navigation} = props;
   return (
     <Screen noPadding backgroundColor="#e5e5e5">
-      <View
-        key="content"
-        style={{
-          paddingHorizontal: 20,
-        }}>
+      <View key="content" style={styles.headerContainer}>
         <Header
           {...props}
           noTitle
           headerLeft={<Icon name="close" type="material-icons" />}
         />
       </View>
-      <View
-        key="footer"
-        style={{
-          flex: 1,
-          borderTopLeftRadius: 30,
-          borderTopRightRadius: 30,
-          padding: 20,
-          paddingVertical: 30,
-          backgroundColor: 'white',
-        }}>
+      <View key="footer" style={styles.bottomContainer}>
         <RouteDetails />
-
-        <View
-          style={{
-            flexDirection: 'row',
-            alignItems: 'center',
-            backgroundColor: colors.background,
-            marginVertical: 20,
-            borderRadius: 10,
-            padding: 15,
-          }}>
-          <View>
-            <Image source={require('../../assets/images/ic_mastercard.png')} />
-          </View>
-          <View style={{flex: 1, flexDirection: 'row', paddingLeft: 10}}>
-            <AppText>**** </AppText>
-            <AppText>8295</AppText>
-          </View>
-        </View>
+        <PaymentCard />
         <Button>Cancel Booking</Button>
       </View>
     </Screen>
   );
 }
+const styles = StyleSheet.create({
+  bottomContainer: {
+    flex: 1,
+    borderTopLeftRadius: 30,
+    borderTopRightRadius: 30,
+    padding: 20,
+    paddingVertical: 30,
+    backgroundColor: 'white',
+  },
+  headerContainer: {
+    paddingHorizontal: 20,
+  },
+});
