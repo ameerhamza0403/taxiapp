@@ -10,6 +10,7 @@ import DriverSearch from '../containers/DriverSearch';
 import Arriving from '../containers/Arriving';
 import TripEnd from '../containers/TripEnd';
 import RideDetails from '../containers/RideDetails';
+import DriverDetails from '../containers/DriverDetails';
 
 const Stack = createStackNavigator();
 
@@ -29,6 +30,7 @@ export const DashboardNav = () => {
       <Stack.Screen name="Arriving" component={Arriving} />
       <Stack.Screen name="TripEnd" component={TripEnd} />
       <Stack.Screen name="Ride details" component={RideDetails} />
+      <Stack.Screen name="Driver details" component={DriverDetails} />
     </Stack.Navigator>
   );
 };

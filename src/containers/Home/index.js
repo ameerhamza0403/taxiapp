@@ -45,6 +45,9 @@ export default function Home(props) {
         <Button onPress={() => navigation.navigate('Ride details')}>
           Ride details
         </Button>
+        <Button onPress={() => navigation.navigate('Driver details')}>
+          Driver details
+        </Button>
       </View>
     </Screen>
   );
