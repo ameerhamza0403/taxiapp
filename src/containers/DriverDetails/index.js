@@ -31,21 +31,10 @@ const DriverDetails = (props) => {
         <Header {...props} />
       </View>
       <View key="content">
-        <View
-          style={{
-            flexDirection: 'row',
-            alignItems: 'center',
-          }}>
-          <View
-            style={{
-              flex: 1,
-              height: 140,
-              width: 140,
-              borderRadius: 150 / 2,
-              justifyContent: 'center',
-            }}>
+        <View style={styles.topContainer}>
+          <View style={styles.imageContainer}>
             <Image
-              style={{height: '60%', aspectRatio: 1}}
+              style={styles.image}
               resizeMode="contain"
               source={require('../../assets/images/photo_driver.png')}
             />
@@ -88,6 +77,21 @@ const DriverDetails = (props) => {
 };
 
 const styles = StyleSheet.create({
+  topContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
+  image: {
+    height: '60%',
+    aspectRatio: 1,
+  },
+  imageContainer: {
+    flex: 1,
+    height: 140,
+    width: 140,
+    borderRadius: 150 / 2,
+    justifyContent: 'center',
+  },
   line: {
     height: 0,
     width: '100%',

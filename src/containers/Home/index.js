@@ -17,20 +17,11 @@ export default function Home(props) {
         />
       </View>
       <View key="content">
-        <Card
-          style={{
-            flexDirection: 'row',
-            paddingVertical: 15,
-          }}>
-          <View
-            style={{
-              width: '15%',
-              alignItems: 'center',
-              justifyContent: 'center',
-            }}>
+        <Card style={styles.card}>
+          <View style={styles.imageContainer}>
             <Image source={require('../../assets/images/ic_route.png')} />
           </View>
-          <View style={{width: '85%'}}>
+          <View style={styles.locationContainer}>
             <AppText> 24, ocean Avenue </AppText>
             <HorizontalRow />
             <AppText onPress={() => navigation.navigate('Select address')} gray>
@@ -52,3 +43,17 @@ export default function Home(props) {
     </Screen>
   );
 }
+const styles = StyleSheet.create({
+  card: {
+    flexDirection: 'row',
+    paddingVertical: 15,
+  },
+  imageContainer: {
+    width: '15%',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  locationContainer: {
+    width: '85%',
+  },
+});
