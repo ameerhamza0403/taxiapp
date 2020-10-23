@@ -42,6 +42,9 @@ export default function Home(props) {
       <View key="footer">
         <Button onPress={() => navigation.navigate('Arriving')}>Next</Button>
         <Button onPress={() => navigation.navigate('TripEnd')}>TripEnd</Button>
+        <Button onPress={() => navigation.navigate('Ride details')}>
+          Ride details
+        </Button>
       </View>
     </Screen>
   );
