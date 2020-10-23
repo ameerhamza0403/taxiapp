@@ -31,16 +31,17 @@ export default function Home(props) {
             <Image source={require('../../assets/images/ic_route.png')} />
           </View>
           <View style={{width: '85%'}}>
-            <AppText>24, ocean Avenue</AppText>
+            <AppText> 24, ocean Avenue </AppText>
             <HorizontalRow />
             <AppText onPress={() => navigation.navigate('Select address')} gray>
-              i'm going to
+              i 'm going to
             </AppText>
           </View>
         </Card>
       </View>
       <View key="footer">
         <Button onPress={() => navigation.navigate('Arriving')}>Next</Button>
+        <Button onPress={() => navigation.navigate('TripEnd')}>TripEnd</Button>
       </View>
     </Screen>
   );
