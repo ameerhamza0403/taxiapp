@@ -1,7 +1,13 @@
 import React, {useState} from 'react';
-import {View, StyleSheet} from 'react-native';
-import {Card, Header, RoundIcon} from '../../components';
-import {AppText} from '../../components/common';
+import {View, StyleSheet, Image} from 'react-native';
+import {
+  Card,
+  Header,
+  PaymentCard,
+  RoundIcon,
+  RouteDetails,
+} from '../../components';
+import {AppText, Button, Screen} from '../../components/common';
 import {Icon} from 'react-native-elements';
 import {useTheme} from '@react-navigation/native';
 
@@ -19,79 +25,73 @@ const IconComp = ({name = 'sc-facebook', type = 'evilicon', onPress}) => (
 const RideDetails = (props) => {
   const {colors} = useTheme();
   return (
-    <View style={styles.container}>
-      <View style={[styles.topContainer, {backgroundColor: colors.primary}]}>
-        <Header {...props} color={colors.white} />
+    <Screen noPadding>
+      <View key="header">
+        <Header {...props} />
+        <View
+          style={[styles.topContainer, {backgroundColor: colors.primary}]}
+        />
       </View>
-      <View style={styles.contentContainer}>
-        <Card style={styles.card}>
-          <View style={styles.cardRow}>
-            <AppText gray>Frequently asked questions</AppText>
-            <Icon
-              name="keyboard-arrow-right"
-              type="material-icons"
-              size={30}
-              color={colors.gray}
+      <View key="content" style={styles.contentContainer}>
+        <View style={styles.card}>
+          <RouteDetails />
+        </View>
+        <AppText bold>Driver</AppText>
+        <Card
+          style={{
+            minHeight: 120,
+            flexDirection: 'row',
+            alignItems: 'center',
+          }}>
+          <View
+            style={{
+              flex: 2,
+              height: 140,
+              width: 140,
+              borderRadius: 150 / 2,
+              alignItems: 'center',
+              justifyContent: 'center',
+            }}>
+            <Image
+              style={{height: '60%', aspectRatio: 1}}
+              resizeMode="contain"
+              source={require('../../assets/images/photo_driver.png')}
             />
           </View>
-          <View style={styles.line} />
-          <View style={styles.cardRow}>
-            <AppText gray>Your support tickets</AppText>
-            <Icon
-              name="keyboard-arrow-right"
-              type="material-icons"
-              size={30}
-              color={colors.gray}
-            />
+          <View
+            style={{
+              flex: 4,
+            }}>
+            <AppText bold>Patrick</AppText>
+            <AppText>Volkswagen Jetta</AppText>
+            <AppText>4.8</AppText>
           </View>
-          <View style={styles.line} />
-          <View style={styles.cardRow}>
-            <AppText gray>Contact us</AppText>
-            <Icon
-              name="keyboard-arrow-right"
-              type="material-icons"
-              size={30}
-              color={colors.gray}
-            />
+          <View
+            style={{
+              flex: 1,
+              alignItems: 'flex-start',
+            }}>
+            <Icon name="keyboard-arrow-right" type="material-icons" size={35} />
           </View>
         </Card>
-        <View style={styles.optionCardsContainer}>
-          <Card style={styles.optionCard}>
-            <IconComp />
-            <AppText>Option 1</AppText>
-          </Card>
-          <Card style={styles.optionCard}>
-            <IconComp />
-            <AppText>Option 2</AppText>
-          </Card>
-          <Card style={styles.optionCard}>
-            <IconComp />
-            <AppText>Option 3</AppText>
-          </Card>
-        </View>
+        <AppText bold>Payment</AppText>
+        <PaymentCard />
+        <Button>Raise issue</Button>
       </View>
-    </View>
+    </Screen>
   );
 };
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
   topContainer: {
-    height: '35%',
-    paddingHorizontal: '2%',
+    height: 150,
   },
   contentContainer: {
     flex: 1,
     paddingHorizontal: 20,
   },
   card: {
-    width: '100%',
-    alignSelf: 'center',
-    paddingVertical: 30,
-    paddingHorizontal: 15,
-    top: -30,
+    top: -40,
   },
   cardRow: {
     flexDirection: 'row',

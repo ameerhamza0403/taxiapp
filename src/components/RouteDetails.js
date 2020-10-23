@@ -14,6 +14,7 @@ const RouteDetails = (props) => {
         borderRadius: 10,
         paddingHorizontal: 10,
         justifyContent: 'space-around',
+        backgroundColor: 'white',
       }}>
       <View
         style={{

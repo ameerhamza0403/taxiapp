@@ -5,3 +5,4 @@ export * from './RoundIcon';
 export * from './Card';
 export * from './HorizontalRow';
 export * from './RouteDetails';
+export * from './PaymentCard';

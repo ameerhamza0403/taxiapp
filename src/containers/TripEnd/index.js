@@ -14,6 +14,7 @@ import {
   Card,
   Header,
   HorizontalRow,
+  PaymentCard,
   RoundIcon,
   RouteDetails,
 } from '../../components';
@@ -54,30 +55,7 @@ export default function TripEnd(props) {
           </AppText>
           <RouteDetails />
 
-          <View
-            style={{
-              flexDirection: 'row',
-              alignItems: 'center',
-              backgroundColor: colors.background,
-              marginTop: 10,
-              borderRadius: 10,
-              padding: 15,
-            }}>
-            <View>
-              <Image
-                source={require('../../assets/images/ic_mastercard.png')}
-              />
-            </View>
-            <View
-              style={{
-                flex: 1,
-                flexDirection: 'row',
-                justifyContent: 'space-between',
-              }}>
-              <AppText>{`**** 8295`} </AppText>
-              <AppText>$7</AppText>
-            </View>
-          </View>
+          <PaymentCard />
         </Card>
       </View>
       <View key="footer">
