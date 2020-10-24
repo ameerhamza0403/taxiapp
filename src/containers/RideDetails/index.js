@@ -37,40 +37,20 @@ const RideDetails = (props) => {
           <RouteDetails />
         </View>
         <AppText bold>Driver</AppText>
-        <Card
-          style={{
-            minHeight: 120,
-            flexDirection: 'row',
-            alignItems: 'center',
-          }}>
-          <View
-            style={{
-              flex: 2,
-              height: 140,
-              width: 140,
-              borderRadius: 150 / 2,
-              alignItems: 'center',
-              justifyContent: 'center',
-            }}>
+        <Card style={styles.driverCard}>
+          <View style={styles.avatarContainer}>
             <Image
-              style={{height: '60%', aspectRatio: 1}}
+              style={styles.avatar}
               resizeMode="contain"
               source={require('../../assets/images/photo_driver.png')}
             />
           </View>
-          <View
-            style={{
-              flex: 4,
-            }}>
+          <View style={{flex: 4}}>
             <AppText bold>Patrick</AppText>
             <AppText>Volkswagen Jetta</AppText>
             <AppText>4.8</AppText>
           </View>
-          <View
-            style={{
-              flex: 1,
-              alignItems: 'flex-start',
-            }}>
+          <View style={{flex: 1}}>
             <Icon name="keyboard-arrow-right" type="material-icons" size={35} />
           </View>
         </Card>
@@ -93,27 +73,22 @@ const styles = StyleSheet.create({
   card: {
     top: -40,
   },
-  cardRow: {
+  driverCard: {
+    minHeight: 120,
     flexDirection: 'row',
     alignItems: 'center',
-    justifyContent: 'space-between',
   },
-  line: {
-    height: 0,
-    width: '100%',
-    borderWidth: 0.5,
-    marginVertical: 15,
+  avatarContainer: {
+    flex: 2,
+    height: 140,
+    width: 140,
+    borderRadius: 150 / 2,
+    alignItems: 'center',
+    justifyContent: 'center',
   },
-  optionCardsContainer: {
-    flexDirection: 'row',
-    flexWrap: 'wrap',
-    justifyContent: 'space-between',
-  },
-  optionCard: {
-    width: '30%',
+  avatar: {
+    height: '60%',
     aspectRatio: 1,
-    justifyContent: 'space-around',
-    padding: 15,
   },
 });
 export default RideDetails;

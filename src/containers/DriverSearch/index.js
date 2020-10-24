@@ -1,24 +1,10 @@
 import {useTheme} from '@react-navigation/native';
 import * as React from 'react';
-import {
-  StyleSheet,
-  Image,
-  View,
-  TextInput,
-  ScrollView,
-  FlatList,
-} from 'react-native';
+import {StyleSheet, View} from 'react-native';
 import {Icon} from 'react-native-elements';
 
-import {
-  Card,
-  Header,
-  HorizontalRow,
-  PaymentCard,
-  RoundIcon,
-  RouteDetails,
-} from '../../components';
-import {AppText, Button, Screen} from '../../components/common';
+import {Header, PaymentCard, RouteDetails} from '../../components';
+import {Button, Screen} from '../../components/common';
 
 export default function DriverSearch(props) {
   const {colors} = useTheme();

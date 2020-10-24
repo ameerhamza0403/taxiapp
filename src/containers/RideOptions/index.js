@@ -17,23 +17,10 @@ export default function RideOptions(props) {
   const {navigation} = props;
   return (
     <Screen noPadding backgroundColor="#e5e5e5">
-      <View
-        key="content"
-        style={{
-          paddingHorizontal: 20,
-        }}>
+      <View key="content" style={styles.header}>
         <Header {...props} />
       </View>
-      <View
-        key="footer"
-        style={{
-          flex: 1,
-          borderTopLeftRadius: 30,
-          borderTopRightRadius: 30,
-          padding: 20,
-          paddingVertical: 30,
-          backgroundColor: 'white',
-        }}>
+      <View key="footer" style={styles.bottomSheet}>
         <FlatList
           horizontal
           showsHorizontalScrollIndicator={false}
@@ -41,44 +28,24 @@ export default function RideOptions(props) {
           keyExtractor={(num) => num.toString()}
           renderItem={() => {
             return (
-              <Card
-                style={{
-                  width: 120,
-                  margin: 10,
-                  alignItems: 'center',
-                  padding: 10,
-                }}>
+              <Card style={styles.carCard}>
                 <Image source={require('../../assets/images/standard.png')} />
                 <AppText>Standard</AppText>
                 <AppText bold>Price</AppText>
 
-                <AppText
-                  style={{
-                    backgroundColor: 'silver',
-                    borderRadius: 20,
-                    paddingHorizontal: 5,
-                  }}
-                  bold>
+                <AppText style={styles.time} bold>
                   3 mins
                 </AppText>
               </Card>
             );
           }}
         />
-        <View
-          style={{
-            flexDirection: 'row',
-            justifyContent: 'space-between',
-            alignItems: 'center',
-          }}>
+        <View style={styles.detailsContainer}>
           <View>
             <AppText>Estimated time trip</AppText>
             <AppText primary>24 mins</AppText>
           </View>
-          <View
-            style={{
-              flexDirection: 'row',
-            }}>
+          <View style={styles.creditCard}>
             <Image source={require('../../assets/images/ic_mastercard.png')} />
             <AppText>****</AppText>
             <AppText>8295</AppText>
@@ -91,3 +58,35 @@ export default function RideOptions(props) {
     </Screen>
   );
 }
+const styles = StyleSheet.create({
+  header: {
+    paddingHorizontal: 20,
+  },
+  bottomSheet: {
+    flex: 1,
+    borderTopLeftRadius: 30,
+    borderTopRightRadius: 30,
+    padding: 20,
+    paddingVertical: 30,
+    backgroundColor: 'white',
+  },
+  carCard: {
+    width: 120,
+    margin: 10,
+    alignItems: 'center',
+    padding: 10,
+  },
+  time: {
+    backgroundColor: 'silver',
+    borderRadius: 20,
+    paddingHorizontal: 10,
+  },
+  detailsContainer: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+  },
+  creditCard: {
+    flexDirection: 'row',
+  },
+});

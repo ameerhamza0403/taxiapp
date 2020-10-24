@@ -2,68 +2,37 @@ import {useTheme} from '@react-navigation/native';
 import * as React from 'react';
 import {StyleSheet, Image, View, TextInput, ScrollView} from 'react-native';
 import {Icon} from 'react-native-elements';
-import {Colors} from 'react-native/Libraries/NewAppScreen';
 import {Card, Header, HorizontalRow, RoundIcon} from '../../components';
-import {AppText, Button, Screen} from '../../components/common';
+import {AppText, Screen} from '../../components/common';
 
 export default function SelectAddress(props) {
   const {colors} = useTheme();
   const {navigation} = props;
   return (
     <Screen noPadding backgroundColor="#e5e5e5">
-      <View
-        key="header"
-        style={{
-          paddingHorizontal: 20,
-        }}>
+      <View key="header" style={styles.header}>
         <Header {...props} />
       </View>
-      <View
-        key="content"
-        style={{
-          flex: 1,
-          borderTopLeftRadius: 30,
-          borderTopRightRadius: 30,
-          padding: 20,
-          paddingVertical: 30,
-          backgroundColor: 'white',
-          marginTop: 50,
-        }}>
-        <Card
-          style={{
-            flexDirection: 'row',
-            paddingVertical: 15,
-          }}>
-          <View
-            style={{
-              width: '15%',
-              alignItems: 'center',
-              justifyContent: 'center',
-            }}>
+      <View key="content" style={styles.bottomSheet}>
+        <Card style={styles.addressCard}>
+          <View style={styles.addressCardImage}>
             <Image source={require('../../assets/images/ic_route.png')} />
           </View>
           <View style={{width: '85%'}}>
             <AppText>24, ocean Avenue</AppText>
             <HorizontalRow />
             <TextInput
-              style={{paddingVertical: 0}}
+              style={styles.textInput}
               placeholder={`i'm going to`}
               onSubmitEditing={() => navigation.navigate('Ride options')}
             />
           </View>
         </Card>
-        <View
-          style={{
-            flexDirection: 'row',
-            paddingVertical: 15,
-            alignItems: 'center',
-          }}>
+        <View style={styles.showOnMapContainer}>
           <Image source={require('../../assets/images/ic_loc.png')} />
           <AppText primary>Show on a map</AppText>
         </View>
-        <AppText gray bold>
-          RECENT
-        </AppText>
+
         {/* <Card
           style={{
             flexDirection: 'row',
@@ -83,15 +52,11 @@ export default function SelectAddress(props) {
             }}
           />
         </Card> */}
+        <AppText gray bold>
+          RECENT
+        </AppText>
         <ScrollView>
-          <View
-            style={{
-              flexDirection: 'row',
-              alignItems: 'flex-start',
-              overflow: 'hidden',
-              justifyContent: 'space-around',
-              paddingVertical: 5,
-            }}>
+          <View style={styles.recentAddress}>
             <RoundIcon
               small
               name="location-on"
@@ -110,3 +75,41 @@ export default function SelectAddress(props) {
     </Screen>
   );
 }
+const styles = StyleSheet.create({
+  header: {
+    paddingHorizontal: 20,
+  },
+  bottomSheet: {
+    flex: 1,
+    borderTopLeftRadius: 30,
+    borderTopRightRadius: 30,
+    padding: 20,
+    paddingVertical: 30,
+    backgroundColor: 'white',
+    marginTop: 50,
+  },
+  addressCard: {
+    flexDirection: 'row',
+    paddingVertical: 15,
+  },
+  addressCardImage: {
+    width: '15%',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  textInput: {
+    paddingVertical: 0,
+  },
+  showOnMapContainer: {
+    flexDirection: 'row',
+    paddingVertical: 15,
+    alignItems: 'center',
+  },
+  recentAddress: {
+    flexDirection: 'row',
+    alignItems: 'flex-start',
+    overflow: 'hidden',
+    justifyContent: 'space-around',
+    paddingVertical: 5,
+  },
+});

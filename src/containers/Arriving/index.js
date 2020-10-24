@@ -4,18 +4,14 @@ import {StyleSheet, Image, View} from 'react-native';
 import {Icon} from 'react-native-elements';
 
 import {Header, RoundIcon} from '../../components';
-import {AppText, Button, Screen} from '../../components/common';
+import {AppText, Screen} from '../../components/common';
 
 export default function Arriving(props) {
   const {colors} = useTheme();
   const {navigation} = props;
   return (
     <Screen noPadding backgroundColor="#e5e5e5">
-      <View
-        key="content"
-        style={{
-          paddingHorizontal: 20,
-        }}>
+      <View key="content" style={styles.header}>
         <Header
           {...props}
           headerLeft={<Icon name="menu" type="material-icons" size={20} />}
@@ -66,6 +62,9 @@ export default function Arriving(props) {
   );
 }
 const styles = StyleSheet.create({
+  header: {
+    paddingHorizontal: 20,
+  },
   bottomContainer: {
     flex: 1,
     borderTopLeftRadius: 30,

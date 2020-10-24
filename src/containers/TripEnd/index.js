@@ -1,19 +1,11 @@
 import {useTheme} from '@react-navigation/native';
 import * as React from 'react';
-import {
-  StyleSheet,
-  Image,
-  View,
-  TextInput,
-  ScrollView,
-  FlatList,
-} from 'react-native';
+import {StyleSheet, View} from 'react-native';
 import {Icon} from 'react-native-elements';
 
 import {
   Card,
   Header,
-  HorizontalRow,
   PaymentCard,
   RoundIcon,
   RouteDetails,
@@ -32,29 +24,18 @@ export default function TripEnd(props) {
           headerLeft={<Icon name="menu" type="material-icons" />}
         />
       </View>
-      <View
-        key="content"
-        style={{
-          height: '90%',
-        }}>
-        <Card
-          style={{
-            flex: 1,
-            alignItems: 'center',
-            justifyContent: 'center',
-            paddingHorizontal: 20,
-          }}>
+      <View key="content">
+        <Card style={styles.card}>
           <RoundIcon
             name="check"
             type="feather"
             size={25}
             color={colors.primary}
           />
-          <AppText style={{marginBottom: 30}} bold>
+          <AppText style={styles.tripEndText} bold>
             Your trip has ended
           </AppText>
           <RouteDetails />
-
           <PaymentCard />
         </Card>
       </View>
@@ -64,3 +45,14 @@ export default function TripEnd(props) {
     </Screen>
   );
 }
+const styles = StyleSheet.create({
+  card: {
+    height: '95%',
+    alignItems: 'center',
+    justifyContent: 'center',
+    paddingHorizontal: 20,
+  },
+  tripEndText: {
+    marginBottom: 30,
+  },
+});

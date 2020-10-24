@@ -10,7 +10,7 @@ const Onboarding = (props) => {
   return (
     <Screen>
       <View key="header">
-        <AppText style={{marginTop: '30%'}} size={50} bold center>
+        <AppText style={styles.heading} size={50} bold center>
           Taxi Kit
         </AppText>
       </View>
@@ -26,6 +26,7 @@ const Onboarding = (props) => {
   );
 };
 const styles = StyleSheet.create({
+  heading: {marginTop: '30%'},
   content: {flex: 1, justifyContent: 'center', alignItems: 'center'},
 });
 export default Onboarding;
