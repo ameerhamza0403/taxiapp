@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "797345686711",
+    "firebase_url": "https://taxi-580b5.firebaseio.com",
+    "project_id": "taxi-580b5",
+    "storage_bucket": "taxi-580b5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:797345686711:android:9da75a239fcfb379071932",
+        "android_client_info": {
+          "package_name": "com.taxikit"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "797345686711-ur3jdabtciakpvu3j52n0sd05qdccob8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAIMu_T-5-0h3rEnx8rBmJD6SPEz4o4IiY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "797345686711-ur3jdabtciakpvu3j52n0sd05qdccob8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
